@@ -15,10 +15,8 @@ public class Main {
         try {
             // Create a connection to the server socket on the server
             InetAddress inetAddress = InetAddress.getLocalHost();
-            //Socket socket = new Socket(host.getHostName(), port);
             Socket socket = new Socket(host, port);
-            //InetAddress inetAddress = InetAddress.getByName(host);
-            System.out.println(host + " ip address: " + inetAddress.getHostAddress());
+            System.out.println(host + ", ip address: " + inetAddress.getHostAddress());
 
             // Read and display the response message sent by server
             ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
